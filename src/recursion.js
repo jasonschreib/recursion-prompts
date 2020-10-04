@@ -122,7 +122,15 @@ var powerOfTwo = function(n) {
     if (n === 1) {
         return true;
     }
-    //base case
+    //base case when n gets to 2
+    if (n === 2) {
+        return true;
+    }
+    //base case where n is not power of 2
+    if (n < 2) {
+        return false;
+    }
+    return powerOfTwo(n/2);
 };
 
 // 9. Write a function that reverses a string.
